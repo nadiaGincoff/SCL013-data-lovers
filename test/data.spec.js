@@ -1,5 +1,4 @@
-import { getPokemons} from '../src/data.js';
-
+import { getPokemons } from '../src/data.js';
 
 describe('getPokemons', () => {
   test('es una funcion', () => {
@@ -7,11 +6,11 @@ describe('getPokemons', () => {
   });
 
   test('Deberia retornar los pokemones ordenados del 0 al 9', () => {
-    expect(getPokemons("0-9")[0].name).toEqual('Bulbasaur');
+    expect(getPokemons("ascendant")[0].name).toEqual('Bulbasaur');
   });
 
   test('Deberia retornar los pokemones ordenados del 9 al 0', () => {
-    expect(getPokemons("9-0")[0].name).toEqual('Mew');
+    expect(getPokemons("descendant")[0].name).toEqual('Mew');
   });
 
   test('Deberia retornar los pokemones ordenados de la A al Z', () => {
@@ -23,18 +22,38 @@ describe('getPokemons', () => {
   });
 
   test('Testea filtro de tipos agua', () => {
-    expect(getPokemons("0-9", "Water")[0].name).toEqual('Squirtle');
+    expect(getPokemons("ascendant", "Water")[0].name).toEqual('Squirtle');
   });
 
   test('Testea filtro de debilidad con ejemplo agua', () => {
-    expect(getPokemons("0-9", "", "Water")[0].name).toEqual('Charmander');
+    expect(getPokemons("ascendant", "", "Water")[0].name).toEqual('Charmander');
   });
 
   test('Testea filtro de tipo y debilidad con ejemplo agua y tierra', () => {
-    expect(getPokemons("0-9", "Ground", "Water")[0].name).toEqual('Sandshrew');
+    expect(getPokemons("ascendant", "Ground", "Water")[0].name).toEqual('Sandshrew');
   });
 
 });
+
+// test search in progress
+// describe('filterCharactersByName', () => {
+//   test('is a function', () => {
+//     expect(typeof filterCharactersByName).toBe('function');
+//   });
+
+//   test('returns ', () => {
+//     // 1 Given dado
+//     let inputSearch = 'Abra';
+
+//     // 2 when cuando
+//     let result = filterCharactersByName(inputSearch);
+
+//     let resultName = result[0];
+
+//     // 3 then entonces
+//       expect(resultName.toEqual('abra'));
+//   });
+// });
 
 // Example test
 // describe('anotherExample', () => {
@@ -42,7 +61,3 @@ describe('getPokemons', () => {
 //     expect(typeof anotherExample).toBe('function');
 //   });
 
-//   test('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });

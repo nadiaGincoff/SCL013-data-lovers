@@ -1,24 +1,10 @@
 import data from './data/pokemon/pokemon.js';
 
-//Se extrae el array de pokemon
+//Se extrae el array de pokémon
 export const pokemons = data.pokemon;
 
-//Se crea la funcion getTipos y se deja el array vacio para que muestre todos los pokemones.
-export const getTypes = () => {
-  let types = []; //se programara para el futuro.
-
-  return types;
-
-}
-//Se crea la funcion getdebilidades y se deja el array vacio para que las muestre todas.
-export const getWeakness = () => {
-  let weakness = []; //se programara para el futuro.
-
-  return weakness;
-
-}
-//Con esta funcion filtramos y ordenamos por numero, tipo y debilidad, y se duplica para no alterar la data original
-export const getPokemons = (order = '0-9', typePokemon = '', weaknessPokemon = '') => {
+//Con esta función filtramos y ordenamos por número, tipo y debilidad, y se duplica para no alterar la data original.
+export const getPokemons = (order = 'ascendant', typePokemon = '', weaknessPokemon = '') => {
   let filterType = [typePokemon];
   let filterWeakness = [weaknessPokemon];
   //Devuelve una copia del array.
@@ -34,21 +20,21 @@ export const getPokemons = (order = '0-9', typePokemon = '', weaknessPokemon = '
     listPokemons = listPokemons.filter(pokemon => pokemon.weaknesses.some(wkPokemon => filterWeakness.includes(wkPokemon)));
   }
 
-  //Se utiliza para evaluar diferentes casos de una variable que serian ordenar de (AZ O numero ascendente y desentente).
+  //Se utiliza para evaluar diferentes casos de una variable que serian ordenar de (AZ, ZA, O numero ascendente y descendente).
   switch (order) {
     case "ZA":
       //Devuelve el array ordenado alfabeticamente o dependiendo la opcion elegida.
       listPokemons.sort((pokemon1, pokemon2) => {
-      //devuelve un resultado a trevez de operador ternario.
+        //devuelve un resultado a trevez de operador ternario.
         return pokemon1.name < pokemon2.name ? 1 : -1;
       });
       break;
-    case "0-9":
+    case "ascendant":
       listPokemons.sort((pokemon1, pokemon2) => {
         return pokemon1.num > pokemon2.num ? 1 : -1;
       });
       break;
-    case "9-0":
+    case "descendant":
       listPokemons.sort((pokemon1, pokemon2) => {
         return pokemon1.num < pokemon2.num ? 1 : -1;
       });
@@ -58,5 +44,14 @@ export const getPokemons = (order = '0-9', typePokemon = '', weaknessPokemon = '
         return pokemon1.name > pokemon2.name ? 1 : -1;
       });
   }
+  return listPokemons;
+}
+
+export const filterCharactersByName = (inputSearch) => {
+  let listPokemons = pokemons.filter(pokemon => {
+
+    return (pokemon.name.toLowerCase().includes(inputSearch))
+
+  });
   return listPokemons;
 }

@@ -12,7 +12,7 @@
 Pokedata es una plataforma web, basado en el juego [Pokémon GO](https://pokemongolive.com/es/), unicamente de los pokemon de la generacion Kanto, que permite al usuario filtrar, ordenar las características de los pokemon y mostrarlas en pantalla.
 
 ## 2. Demo
-<!-- [Demo del proyecto en gh-pages](urldeghpages) -->
+_[Click para ver demo del proyecto en Gh-pages](https://nadiagincoff.github.io/SCL013-data-lovers/src/index.html)_
 
 <!-- ## 3. Instalación de dependencias
 	Aqui deberiamos poner lo necesario para que cualquier persona pueda utilizar nuestro repositorio, por ejemplo la instalacion de las dependencias (npm install) -->
@@ -32,13 +32,13 @@ Para eso, ingreso a la página y los ordeno alfabéticamente o numéricamente."_
 
 ###### Criterio de aceptación
 
-[x] El usuario puede ingresar a la página y ver todos los pokémon en pantalla.
-[x] El usuario puede ordenar los pokémon haciendo uso de un menú desplegable.
-[] La página debe ser responsive.
-[x] Debe tener una interfaz que siga los fundamentos de visual design.
+* [x] El usuario puede ingresar a la página y ver todos los pokémon en pantalla.
+* [x] El usuario puede ordenar los pokémon haciendo uso de un menú desplegable.
+* [] La página debe ser responsive.
+* [x] Debe tener una interfaz que siga los fundamentos de visual design.
 
 ###### Definición de terminado.
-[x] El usuario puede ordenar las tarjetas pokemon seleccionando una opción (A-Z, Z-A, Ascendente, Descendente) en un menú desplegable.
+* [x] El usuario puede ordenar las tarjetas pokemon seleccionando una opción (A-Z, Z-A, Ascendente, Descendente) en un menú desplegable.
 
 ##### Historia de usuario 2
 
@@ -48,16 +48,16 @@ Para obtener todos los pokémon de dicho tipo."_
 
 ###### Criterio de aceptación
 
-[x] El usuario al entrar a la página y tener todos los pokemones en pantalla, puede  filtrar por tipo haciendo uso del menú desplegable.
-[x] Puede seleccionar la opcion que desee, _en este caso la opcion fuego_
-[] La página y sus opciones se pueden ver fácilmente desde cualquier dispositivo.
+* [x] El usuario al entrar a la página y tener todos los pokemones en pantalla, puede  filtrar por tipo haciendo uso del menú desplegable.
+* [x] Puede seleccionar la opcion que desee, _en este caso la opcion fuego_
+* [] La página y sus opciones se pueden ver fácilmente desde cualquier dispositivo.
 
 ###### Definición de terminado.
-[x] El usuario puede observar los pokemon de tipo fuego con su nombre y su numeración.
-[x] El código cumple con la guía de estilos acordada.
-[x] El código esta en el repositorio.
-[x] El código tiene y pasa los test necesarios y se ha hecho en Visual Studio Code.
-[x] Esta historia ha sido testeada con 2 personas y se han incorporado las mejoras indicadas para su usabilidad.
+* [x] El usuario puede observar los pokemon de tipo fuego con su nombre y su numeración.
+* [x] El código cumple con la guía de estilos acordada.
+* [x] El código esta en el repositorio.
+* [x] El código tiene y pasa los test necesarios y se ha hecho en Visual Studio Code.
+* [x] Esta historia ha sido testeada con 2 personas y se han incorporado las mejoras indicadas para su usabilidad.
 
 #### Prototipo de baja fidelidad
 
