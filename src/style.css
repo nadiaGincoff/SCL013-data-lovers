@@ -79,12 +79,6 @@ select:focus {
   text-align: center;
   display: block;
   padding: 15px 10px;
-  margin-top: 7px;
-}
-
-.flex-element label {
-  margin-top: 5px;
-  padding-top: 5px;
 }
 
 .flex-element:hover {
@@ -92,7 +86,7 @@ select:focus {
 }
 
 .filterOption {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 /* SEARCH */
@@ -104,7 +98,7 @@ select:focus {
 
 #search-box {
   margin-right: 10%;
-  margin-top: 1%;
+  margin-top: 1.7%;
   margin-bottom: 1%;
 }
 
@@ -407,13 +401,8 @@ margin-left: 63px;
   background-color: #424242;
 }
 
-@media only screen and (min-width: 800px) {
-  .flex-element {
-    display: block;
-  }
-}
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
   .body {
     border-radius: 10px;
   }
@@ -524,9 +513,25 @@ margin-left: 63px;
   }
 
 }
-
-@media only screen and (max-width: 1080px) {
+@media only screen and (min-width: 860px) and (max-width: 1200px){
   .containerMain {
-    margin-top: 30%;
+    margin-top: 30vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .flex-element {
+    display: block;
+  }
+  .containerMain {
+    margin-top: 30vh;
+  }
+  .navegationMenu {
+    font-size: 13px;
+  }
+  .flex-element{
+    padding: 8px 4px;
+  }
+  label {
+    font-size: 14px;
   }
 }
