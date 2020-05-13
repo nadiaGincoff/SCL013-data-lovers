@@ -30,7 +30,6 @@ const displayMenuPhone = () => {
       flexElement.style.display = "none";
     }
   });
-
 }
 
 homeBtn.addEventListener("click", () => {
@@ -38,93 +37,89 @@ homeBtn.addEventListener("click", () => {
 });
 
 const modalOpen = (pokemon) => {
-  let bodyElement = document.getElementById("Body");
-  let dark = document.createElement("div");
-  let win = document.createElement("div");
-  let button = document.createElement("button");
+    let bodyElement = document.getElementById("Body");
+    let dark = document.createElement("div");
+    let win = document.createElement("div");
+    let button = document.createElement("button");
 
-  dark.id = "dark";
-  win.id = "win";
-  button.id = "button";
-  button.innerHTML = '<i class="fas fa-times-circle"></i>';
+    dark.id = "dark";
+    win.id = "win";
+    button.id = "button";
+    button.innerHTML = '<i class="fas fa-times-circle"></i>';
 
-  button.addEventListener("click", () => {
-    dark.remove();
+button.addEventListener("click", () => {
+  dark.remove();
+});
+
+let htmlContent = '';
+
+htmlContent += '<div class="name">' + pokemon.name + '</div>';
+
+htmlContent += '       <div class="imgModal">';
+htmlContent += '  <img src="' + pokemon.img + '">';
+htmlContent += '        </div>';
+
+htmlContent += '       <div class="margenes inline-types">';
+htmlContent += '           <label>Tipo: </label>';
+htmlContent += '           <div class="margenes inline-types">';
+if (pokemon.type) {
+  pokemon.type.forEach(element => {
+      htmlContent += '               <span class="char _' + element.toLowerCase() + '">' + element + '</span>';
   });
+}
+htmlContent += '        </div>';
+htmlContent += '     </div>';
 
-  let htmlContent = "";
 
-  htmlContent += '<div class="name">' + pokemon.name + "</div>";
+htmlContent += '       <div class="margenes inline-types">';
+htmlContent += '           <label>Debilidad: </label>';
+htmlContent += '           <div class="margenes inline-types">';
+if (pokemon.weaknesses) {
+  pokemon.weaknesses.forEach(element => {
+      htmlContent += '               <span class="char _' + element.toLowerCase() + '">' + element + '</span>';
 
-  htmlContent += '       <div class="imgModal">';
-  htmlContent += '  <img src="' + pokemon.img + '">';
-  htmlContent += "        </div>";
+  });
+}
+htmlContent += '        </div>';
+htmlContent += '      </div>';
 
-  htmlContent += '       <div class="typeModal margenes">';
-  htmlContent += "           <label>Tipo: </label>";
-  htmlContent += "           <div>";
-  if (pokemon.type) {
-    pokemon.type.forEach((element) => {
-      htmlContent +=
-        '               <span class="char _' +
-        element.toLowerCase() +
-        '">' +
-        element +
-        "</span>";
-    });
-  }
-  htmlContent += "        </div>";
 
-  htmlContent += '       <div class="weakneModal margenes">';
-  htmlContent += "           <label>Debilidad: </label>";
-  htmlContent += "           <div>";
-  if (pokemon.weaknesses) {
-    pokemon.weaknesses.forEach((element) => {
-      htmlContent +=
-        '               <span class="char _' +
-        element.toLowerCase() +
-        '">' +
-        element +
-        "</span>";
-    });
-  }
-  htmlContent += "        </div>";
+htmlContent += '       <div class="margenes">';
+htmlContent += '          <p><label>Altura:</label> <span>' + pokemon.height + '</span></p>';
+htmlContent += '          <p><label>Peso:</label> <span>' + pokemon.weight + '</span></p>';
+htmlContent +=            '<p><label>Caramelos:</label> <span>' + pokemon.candy + '</span></p>';
+htmlContent += '        </div>';
 
+if (pokemon.next_evolution) {
   htmlContent += '       <div class="margenes">';
-  htmlContent += " <label>Altura:</label> <span>" + pokemon.height + "</span>";
-  htmlContent += " <label>Peso:</label> <span>" + pokemon.weight + "</span>";
-  htmlContent +=
-    " <label>Caramelos:</label> <span>" + pokemon.candy + "</span>";
-  htmlContent += "        </div>";
+  htmlContent += '          <p><label>Evolucion</label>';
+  htmlContent += '           <div class="margenes">';
+  pokemon.next_evolution.forEach(element => {
+      htmlContent += '          <p><span class="">' + element.name + '</span>';
+      htmlContent += '          <span>' +  '#' + element.num + '</span></p>';
+  });
+  htmlContent += '            </div>';
+  htmlContent += '       </div>';
+}
 
-  if (pokemon.next_evolution) {
-    htmlContent += '       <div class="">';
-    htmlContent += "           <label>Evolucion</label>";
-    htmlContent += "           <div>";
-    pokemon.next_evolution.forEach((element) => {
-      htmlContent +=
-        '               <span class="">' + element.name + "</span>";
-      htmlContent += '               <p="">' + "#" + element.num + "</p>";
-    });
-    htmlContent += '       <div class="">';
-  }
+if (pokemon.prev_evolution) {
+  htmlContent += '       <div class="margenes">';
+  htmlContent +=            '<p><label>Previa Evolucion</label></p>';
+  htmlContent += '            <div class="margenes">';
+  pokemon.prev_evolution.forEach(element => {
+      htmlContent +=             '<p><span class="">' + element.name + '</span>';
+      htmlContent += '               <span>' +  '#' + element.num + '</span></p>';
+  });
+  htmlContent += '             </div>';
+  htmlContent += '        </div>';
 
-  if (pokemon.prev_evolution) {
-    htmlContent += '       <div class="">';
-    htmlContent += "           <label>Previa Evolucion</label>";
-    htmlContent += "           <div>";
-    pokemon.prev_evolution.forEach((element) => {
-      htmlContent +=
-        '               <span class="">' + element.name + "</span>";
-      htmlContent += '               <p="">' + "#" + element.num + "</p>";
-    });
-    htmlContent += "        </div>";
-  }
+}
 
-  win.appendChild(button);
-  win.insertAdjacentHTML("beforeend", htmlContent);
-  dark.appendChild(win);
-  bodyElement.appendChild(dark);
+
+win.appendChild(button);
+win.insertAdjacentHTML('beforeend', htmlContent);
+dark.appendChild(win);
+bodyElement.appendChild(dark);
 };
 
 //Obtenemos los pokemones de acuerdo a los filtros.

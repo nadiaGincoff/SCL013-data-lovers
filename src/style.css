@@ -37,6 +37,10 @@ header {
 .icon-display-menu {
   display: none;
 }
+label {
+  margin: 0 5px 0 0;
+  color: white;
+}
 
 /* Menú de navegación, opciones desplegables */
 
@@ -44,8 +48,6 @@ header {
   background-color: #424242;
   border: none;
   color: white;
-  margin-top: 1.5%;
-  margin-bottom: 0.5%;
   font-size: 16px;
 }
 
@@ -76,7 +78,13 @@ select:focus {
   width: 80%;
   text-align: center;
   display: block;
-  padding: 15px 20px;
+  padding: 15px 10px;
+  margin-top: 7px;
+}
+
+.flex-element label {
+  margin-top: 5px;
+  padding-top: 5px;
 }
 
 .flex-element:hover {
@@ -250,35 +258,56 @@ footer {
 }
 
 #win {
-  background-color: #fff;
-  display: block;
-  position: absolute;
-  width: 500px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px black;
-  margin-left: -250px;
-  margin-top: -200px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    margin-left: -250px;
+    margin-top: -200px;
+    animation-name: modal;
+    animation-duration: 1s;
 }
 
+@keyframes win{
+  from{top: -800px; opacity: 0;}
+  to{top:50; opacity:1}
+}
+
+
 #win label {
-  color: black;
-  font-size: 18px;
+    color: black;
+    font-size: 18px;
+    display: block;
+    margin-top: 2px;
+    font-weight: bold;
 }
 
 .imgModal {
-  display: block;
-  float: left;
+    display: block;
+    float: left;
+    margin-right: 40px;
+    margin-left: 30px;
 }
 
-.typeModal margenes {
-  margin-bottom: 10px;
+.margenes {
+margin-top: 5px;
+margin-left: 63px;
 }
 
+.margenes p label, .margenes p span {
+  display: table-cell!important;
+}
 
+.margenes .inline-types {
+  display: flex;
+  flex-wrap: wrap;
+}
 #button {
   color: darkred;
   float: right;
@@ -292,14 +321,17 @@ footer {
 }
 
 .char {
-  padding: 2px 4px;
-  border-radius: 5px;
-  margin: 0 4px;
-  border-style: inset;
+    padding: 2px 4px;
+    border-radius: 5px;
+    margin: 0 4px;
+    border-style: inset;
+    display: table-cell;
 }
 
 .name {
-  font-size: 40px;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /*Estilo de los tipos y debilidades*/
@@ -375,13 +407,13 @@ footer {
   background-color: #424242;
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 800px) {
   .flex-element {
     display: block;
   }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 800px) {
   .body {
     border-radius: 10px;
   }
@@ -491,4 +523,10 @@ footer {
     margin-bottom: 15%;
   }
 
+}
+
+@media only screen and (max-width: 1080px) {
+  .containerMain {
+    margin-top: 30%;
+  }
 }
