@@ -78,7 +78,10 @@ select:focus {
   width: 80%;
   text-align: center;
   display: block;
-  padding: 15px 10px;
+  padding: 9px 10px;
+}
+#flex-element1 {
+  margin-top: 1vh;
 }
 
 .flex-element:hover {
@@ -86,7 +89,7 @@ select:focus {
 }
 
 .filterOption {
-  margin-top: 10%;
+  margin-top: 3vh;
 }
 
 /* SEARCH */
@@ -511,6 +514,11 @@ margin-left: 63px;
     margin-left: 20%;
     margin-bottom: 15%;
   }
+  #win {
+    width: 447px;
+    height: 500px;
+    margin-left: -230px;
+  }
 
 }
 @media only screen and (min-width: 860px) and (max-width: 1200px){
@@ -518,7 +526,7 @@ margin-left: 63px;
     margin-top: 30vh;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1600px){
   .flex-element {
     display: block;
   }

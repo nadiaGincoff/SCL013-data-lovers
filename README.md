@@ -90,10 +90,10 @@ Teniendo en cuenta la cantidad de usuarios que tiene Pokémon GO, llegamos a la 
 
 ##### Criterio de aceptación
 
-*[x] El usuario al entrar a la página y puede tener todos los pokémones en pantalla
-*[x] Puede hacer _click_ sobre cualquier pokémon
-*[x] Saldrá un _Modal_ con las características del pokémon
-*[x] Podrá ver detalles de las características del pokémon como _peso, altura, caramelos_ además de su tipo y debilidad por color.
+* [x] El usuario al entrar a la página y puede tener todos los pokémones en pantalla
+* [x] Puede hacer _click_ sobre cualquier pokémon
+* [x] Saldrá un _Modal_ con las características del pokémon
+* [x] Podrá ver detalles de las características del pokémon como _peso, altura, caramelos_ además de su tipo y debilidad por color.
 
 ##### Definición de terminado.
 
@@ -108,9 +108,9 @@ Teniendo en cuenta la cantidad de usuarios que tiene Pokémon GO, llegamos a la 
 
 ###### Criterio de aceptación
 
-*[x] El buscador se encuentra visible en la página
-*[x] Puede _buscar_ cualquier pokémon de la región Kanto
-*[x] El buscador se adapta a cualquier dispositivo
+* [x] El buscador se encuentra visible en la página
+* [x] Puede _buscar_ cualquier pokémon de la región Kanto
+* [x] El buscador se adapta a cualquier dispositivo
 
 ###### Definición de terminado.
 
@@ -118,9 +118,8 @@ Teniendo en cuenta la cantidad de usuarios que tiene Pokémon GO, llegamos a la 
 * [x] Al apretar _enter_, se visualiza la tarjeta pokémon en la pantalla
 * [x] El diseño es responsive y cumple con la guía de estilos acordada.
 
+#### Prototipo de baja fidelidad
 ###### Sketch
-
- #### Prototipo de baja fidelidad
 [Click para ver prototipo de baja fidelidad hecho en papel y lápiz](https://www.dropbox.com/s/a3ze7x8usgd0q4y/prototipo%20a%20lapiz.jpeg?dl=0)
 
 ###### Prototipo en inVision
